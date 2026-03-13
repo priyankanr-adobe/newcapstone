@@ -31,3 +31,150 @@
     order: unset;
   }
 }
+
+/* FAQ page two-column layout */
+
+.columns.faq-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.columns.faq-layout > div {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* left image */
+
+.columns.faq-layout img {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* paragraph under image */
+
+.columns.faq-layout > div > div:first-child p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* right column heading */
+
+.columns.faq-layout > div > div:last-child h2,
+.columns.faq-layout > div > div:last-child h3,
+.columns.faq-layout > div > div:last-child strong {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+/* right column text */
+
+.columns.faq-layout > div > div:last-child p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* links */
+
+.columns.faq-layout a {
+  color: #3d63ff;
+  text-decoration: none;
+}
+
+/* move right column content little right */
+
+.columns.faq-layout > div > div:last-child {
+  padding-left: 35px;
+}
+/* increase paragraph size under image */
+
+.columns.faq-layout > div > div:first-child p {
+  font-size: 19px;      /* increase text size */
+  line-height: 1.8;     /* better readability */
+  max-width: 750px;     /* keep same width as WKND layout */
+}
+
+/* =========================
+   LAPTOP
+   ========================= */
+@media (max-width: 1200px) {
+
+  .columns.faq-layout {
+    max-width: 1000px;
+  }
+
+  .columns.faq-layout > div {
+    gap: 50px;
+  }
+
+  .columns.faq-layout > div > div:last-child {
+    padding-left: 28px;
+  }
+
+  .columns.faq-layout > div > div:first-child p {
+    font-size: 18px;
+    max-width: 680px;
+  }
+
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+@media (max-width: 1024px) {
+
+  .columns.faq-layout > div {
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+  }
+
+  .columns.faq-layout > div > div:last-child {
+    padding-left: 20px;
+  }
+
+  .columns.faq-layout > div > div:last-child h2,
+  .columns.faq-layout > div > div:last-child h3,
+  .columns.faq-layout > div > div:last-child strong {
+    font-size: 24px;
+  }
+
+  .columns.faq-layout > div > div:first-child p {
+    font-size: 17px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+
+  .columns.faq-layout > div {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .columns.faq-layout > div > div:last-child {
+    padding-left: 0;
+  }
+
+  .columns.faq-layout > div > div:last-child h2,
+  .columns.faq-layout > div > div:last-child h3,
+  .columns.faq-layout > div > div:last-child strong {
+    font-size: 22px;
+  }
+
+  .columns.faq-layout > div > div:first-child p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+}

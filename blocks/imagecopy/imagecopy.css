@@ -1,0 +1,118 @@
+.imagecopy {
+  max-width: 760px;
+  margin: 0 0 34px;
+}
+
+/* first row = image */
+.imagecopy > div:first-child {
+  max-width: 760px;
+  margin-bottom: 30px;
+}
+
+.imagecopy > div:first-child picture,
+.imagecopy > div:first-child img {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+}
+
+/* remove default paragraph spacing around image */
+.imagecopy > div:first-child p {
+  margin: 0;
+}
+
+/* second row = text */
+.imagecopy > div:last-child {
+  max-width: 760px;
+}
+
+.imagecopy > div:last-child p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 2.5;
+  color: #222;
+  text-align: justify;
+}
+
+/* stronger rule inside article shell */
+.article-shell .imagecopy,
+.article-shell .imagecopy > div,
+.article-shell .imagecopy > div:first-child,
+.article-shell .imagecopy > div:last-child {
+  max-width: 760px;
+}
+
+/* =========================
+   LAPTOP
+   ========================= */
+@media (max-width: 1200px) {
+
+  .imagecopy {
+    max-width: 700px;
+  }
+
+  .imagecopy > div:first-child,
+  .imagecopy > div:first-child picture,
+  .imagecopy > div:first-child img,
+  .imagecopy > div:last-child {
+    max-width: 700px;
+  }
+
+  .imagecopy > div:last-child p {
+    font-size: 17px;
+    line-height: 2.3;
+  }
+
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+@media (max-width: 1024px) {
+
+  .imagecopy {
+    max-width: 100%;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+
+  .imagecopy > div:first-child,
+  .imagecopy > div:last-child {
+    max-width: 100%;
+  }
+
+  .imagecopy > div:first-child img {
+    max-width: 100%;
+  }
+
+  .imagecopy > div:last-child p {
+    font-size: 17px;
+    line-height: 2.1;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+
+  .imagecopy {
+    padding: 0 16px;
+    margin-bottom: 28px;
+  }
+
+  .imagecopy > div:first-child {
+    margin-bottom: 22px;
+  }
+
+  .imagecopy > div:last-child p {
+    font-size: 16px;
+    line-height: 2;
+    text-align: left;
+  }
+
+}

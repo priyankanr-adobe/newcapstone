@@ -1,0 +1,119 @@
+.articlepagesidebar-wrapper {
+  display: block;
+}
+
+.articlepagesidebar-title {
+  margin: 0 0 28px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #111;
+}
+
+.articlepagesidebar-card {
+  position: relative;
+  margin: 0 0 24px;
+  padding-left: 28px;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.articlepagesidebar-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #e5e5e5;
+}
+
+.articlepagesidebar-card.active,
+.articlepagesidebar-card:hover {
+  background: #f4e300;
+  padding: 24px 24px 24px 28px;
+}
+
+.articlepagesidebar-card.active::before,
+.articlepagesidebar-card:hover::before {
+  display: none;
+}
+
+.articlepagesidebar-card-title {
+  font-size: 18px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 14px;
+}
+
+.articlepagesidebar-card-date {
+  font-size: 12px;
+  line-height: 1.6;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.articlepagesidebar-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.articlepagesidebar-card-title a {
+  color: inherit;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+/* LAPTOP */
+@media (max-width: 1200px) {
+  .articlepagesidebar-card {
+    min-height: 130px;
+    padding-left: 24px;
+  }
+
+  .articlepagesidebar-card-title {
+    font-size: 17px;
+  }
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .articlepagesidebar-card {
+    min-height: 120px;
+    padding-left: 22px;
+    margin-bottom: 20px;
+  }
+
+  .articlepagesidebar-card-title {
+    font-size: 16px;
+  }
+
+  .articlepagesidebar-card-date {
+    font-size: 11px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .articlepagesidebar-title {
+    margin-bottom: 20px;
+  }
+
+  .articlepagesidebar-card {
+    min-height: auto;
+    padding-left: 18px;
+    margin-bottom: 18px;
+  }
+
+  .articlepagesidebar-card-title {
+    font-size: 15px;
+  }
+
+  .articlepagesidebar-card-date {
+    font-size: 11px;
+  }
+}

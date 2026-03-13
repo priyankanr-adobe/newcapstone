@@ -1,0 +1,181 @@
+/* /blocks/herocards/herocards.css */
+
+.herocards {
+  margin-bottom: 3rem;
+  padding: 0 20px;
+}
+
+.hero-card-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image styling: Ensure it spans full width */
+.hero-card-inner > div:first-child picture {
+  display: block;
+}
+
+.hero-card-inner > div:first-child img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Content Box (Text & Button) */
+.hero-card-inner > div:nth-child(2) {
+  background-color: white;
+  padding: 2.5rem;
+  /* This pulls the box up over the image */
+  margin: -100px 40px 0 40px; 
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Button Styling (Yellow background) */
+.hero-card-inner .button-container a {
+  background-color: #ffdc00;
+  color: #000;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* /blocks/herocards/herocards.css */
+
+.herocards {
+  margin-bottom: 2rem;
+}
+
+.hero-card-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 1. Pull the white box up over the image */
+.hero-card-inner > div:nth-child(2) {
+  background-color: white;
+  padding: 2.5rem;
+  margin: -80px 40px 0 40px; /* Negative top margin creates the overlap */
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* 2. Text styling */
+.hero-card-inner h3 {
+  margin-top: 0;
+  font-size: 1.75rem;
+}
+
+/* 3. Force the Link to look like a Yellow Button */
+.hero-card-inner .button-container a {
+  background-color: #ffdc00; /* Official WKND Yellow */
+  color: #000;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 0;
+}
+
+.hero-card-inner .button-container a:hover {
+  background-color: #e6c700;
+}
+
+/* /blocks/herocards/herocards.css */
+
+/* Only target buttons inside the hero card */
+.herocards .button-wrapper a.button.primary {
+    background-color: #ffdc00 !important;
+    color: #000 !important;
+    padding: 12px 30px !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 0;
+    border: none !important;
+}
+
+.herocards .button-wrapper a.button.primary:hover {
+    background-color: #e6c700 !important;
+}
+
+/* =========================
+   LAPTOP
+   ========================= */
+@media (max-width: 1200px) {
+
+  .herocards {
+    padding: 0 18px;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-card-inner > div:nth-child(2) {
+    margin: -70px 30px 0 30px;
+    padding: 2.2rem;
+  }
+
+  .hero-card-inner h3 {
+    font-size: 1.6rem;
+  }
+
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+@media (max-width: 1024px) {
+
+  .herocards {
+    padding: 0 16px;
+  }
+
+  .hero-card-inner > div:nth-child(2) {
+    margin: -60px 24px 0 24px;
+    padding: 2rem;
+  }
+
+  .hero-card-inner h3 {
+    font-size: 1.5rem;
+  }
+
+  .herocards .button-wrapper a.button.primary {
+    padding: 10px 24px !important;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+
+  .herocards {
+    padding: 0 12px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-card-inner > div:nth-child(2) {
+    margin: -40px 12px 0 12px;
+    padding: 1.6rem;
+  }
+
+  .hero-card-inner h3 {
+    font-size: 1.3rem;
+  }
+
+  .herocards .button-wrapper a.button.primary {
+    padding: 9px 20px !important;
+    font-size: 13px;
+  }
+
+}

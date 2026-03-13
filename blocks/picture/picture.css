@@ -1,0 +1,54 @@
+.image {
+  max-width: 760px;
+  margin: 50px 0;
+}
+
+.image picture {
+  display: block;
+  width: 100%;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* =========================
+   LAPTOP
+   ========================= */
+@media (max-width: 1200px) {
+
+  .image {
+    max-width: 700px;
+    margin: 44px 0;
+  }
+
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+@media (max-width: 1024px) {
+
+  .image {
+    max-width: 100%;
+    margin: 40px 24px;
+    box-sizing: border-box;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+
+  .image {
+    margin: 34px 16px;
+  }
+
+}

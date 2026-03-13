@@ -1,0 +1,104 @@
+.tabs {
+  width: 100%;
+  margin: 24px 0 36px;
+}
+ 
+/* remove black full bar background */
+.tabs ul {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+ 
+/* each tab item */
+.tabs li {
+  margin: 0;
+  padding: 0;
+}
+ 
+/* normal tab links */
+.tabs a {
+  display: inline-block;
+  padding: 16px 26px;
+  color: #222;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1;
+  transition: all 0.2s ease;
+}
+ 
+/* hover */
+.tabs a:hover {
+  color: #000;
+}
+ 
+.tabs a.active {
+  background: #222;
+  color: #fff;
+}
+
+/* =========================
+   LAPTOP
+   ========================= */
+@media (max-width: 1200px) {
+
+  .tabs {
+    margin: 22px 0 32px;
+  }
+
+  .tabs ul {
+    gap: 24px;
+  }
+
+  .tabs a {
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+@media (max-width: 1024px) {
+
+  .tabs ul {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .tabs a {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+
+  .tabs {
+    margin: 20px 0 28px;
+  }
+
+  .tabs ul {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .tabs a {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+}

@@ -1,0 +1,39 @@
+.divider {
+  width: 5cm;
+  height: 4px;
+  background-color: yellow;
+  margin: 20px 0;
+}
+
+/* =========================
+   LAPTOP
+   ========================= */
+@media (max-width: 1200px) {
+  .divider {
+    width: 4.5cm;
+    height: 4px;
+    margin: 18px 0;
+  }
+}
+
+/* =========================
+   TABLET
+   ========================= */
+@media (max-width: 1024px) {
+  .divider {
+    width: 4cm;
+    height: 3px;
+    margin: 16px 0;
+  }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+  .divider {
+    width: 3cm;
+    height: 3px;
+    margin: 14px 0;
+  }
+}

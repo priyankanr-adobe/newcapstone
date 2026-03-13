@@ -1,0 +1,137 @@
+.authorbio {
+  max-width: 1300px;
+  margin: 80px 0;
+  padding-top: 36px;
+  border-top: 1px solid #ddd;
+}
+
+/* layout */
+.authorbio-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 120px; /* space between text and icons */
+}
+
+/* left side */
+.authorbio-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* author image */
+.authorbio-image img,
+.authorbio-image picture {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* name */
+.authorbio-name {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #111;
+}
+
+/* role text */
+.authorbio-role {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #777;
+  margin-top: 6px;
+}
+
+/* right icon box */
+.authorbio-social {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: #222;
+  padding: 18px 32px; /* increase padding */
+}
+
+/* icons */
+.authorbio-social img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
+
+/* LAPTOP */
+@media (max-width: 1200px) {
+  .authorbio {
+    margin: 70px 0;
+  }
+
+  .authorbio-wrapper {
+    gap: 80px;
+  }
+
+  .authorbio-name {
+    font-size: 26px;
+  }
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .authorbio {
+    margin: 60px 0;
+  }
+
+  .authorbio-wrapper {
+    gap: 60px;
+  }
+
+  .authorbio-image img,
+  .authorbio-image picture {
+    width: 76px;
+    height: 76px;
+  }
+
+  .authorbio-name {
+    font-size: 24px;
+  }
+
+  .authorbio-social {
+    padding: 16px 26px;
+    gap: 24px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .authorbio-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  .authorbio-left {
+    gap: 18px;
+  }
+
+  .authorbio-image img,
+  .authorbio-image picture {
+    width: 64px;
+    height: 64px;
+  }
+
+  .authorbio-name {
+    font-size: 20px;
+  }
+
+  .authorbio-social {
+    padding: 14px 22px;
+    gap: 20px;
+  }
+
+  .authorbio-social img {
+    width: 18px;
+    height: 18px;
+  }
+}

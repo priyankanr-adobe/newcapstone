@@ -1,0 +1,141 @@
+/* Container */
+.faq {
+    max-width: 800px;
+    margin: 40px ;
+    border-top: 1px solid #ddd;
+}
+
+.faq .faq-item {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Question Button: Tight vertical padding for reduced spacing */
+.faq button.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* This padding controls the spacing between questions */
+    padding: 16px 0 !important; 
+    background: none !important;
+    border: none !important;
+    cursor: pointer;
+    text-align: left;
+    outline: none;
+}
+
+/* Question Text */
+.faq button.faq-question .faq-question-text {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    letter-spacing: 0.5px;
+}
+
+/* Icon: Moved closer to text */
+.faq button.faq-question .faq-icon {
+    font-size: 20px;
+    font-weight: 300;
+    color: #000;
+    /* Adjust this value to move the icon left or right */
+    margin-left: 10px; 
+    flex-shrink: 0;
+}
+
+/* Answer */
+.faq .faq-answer {
+    padding-bottom: 16px;
+    color: #444;
+}
+
+.faq .faq-answer p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* =========================
+   LAPTOP
+   ========================= */
+@media (max-width: 1200px) {
+
+  .faq {
+    max-width: 720px;
+    margin: 36px;
+  }
+
+  .faq button.faq-question {
+    padding: 14px 0 !important;
+  }
+
+  .faq button.faq-question .faq-question-text {
+    font-size: 17px;
+  }
+
+  .faq .faq-answer p {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+@media (max-width: 1024px) {
+
+  .faq {
+    max-width: 100%;
+    margin: 32px 24px;
+  }
+
+  .faq button.faq-question {
+    padding: 13px 0 !important;
+  }
+
+  .faq button.faq-question .faq-question-text {
+    font-size: 16px;
+  }
+
+  .faq button.faq-question .faq-icon {
+    font-size: 18px;
+  }
+
+  .faq .faq-answer p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+
+  .faq {
+    margin: 28px 16px;
+  }
+
+  .faq button.faq-question {
+    padding: 12px 0 !important;
+  }
+
+  .faq button.faq-question .faq-question-text {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .faq button.faq-question .faq-icon {
+    font-size: 16px;
+    margin-left: 8px;
+  }
+
+  .faq .faq-answer p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+}

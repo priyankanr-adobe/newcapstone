@@ -323,3 +323,249 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+/* Footer background */
+footer .footer {
+  background-color: #1d1d1d;
+  color: white;
+  padding: 20px 40px;   /* reduce footer height */
+}
+ 
+/* container width like WKND */
+footer .footer .default-content-wrapper {
+  max-width: 1100px;
+  margin: auto;
+}
+ 
+/* top row layout */
+footer .footer .section:first-child .default-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 120px;   /* increase this value for more space */
+}
+ 
+/* smaller WKND logo */
+footer .footer h2 {
+  font-size: 24px;
+  margin: 0;
+}
+ 
+/* navigation links */
+footer .footer ul {
+  display: flex;
+  gap: 20px;  /* reduce space between links */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+/* link style */
+footer .footer ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+ 
+/* copyright spacing */
+footer .footer p:first-of-type {
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+ 
+/* description paragraph */
+footer .footer .default-content-wrapper p {
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+/* Targets the "ALL ARTICLES" link specifically */
+.default-content-wrapper p a[href*="magazine"] {
+  display: inline-block;
+  background-color: #ffeb00; /* The yellow color */
+  color: #000;              /* Black text */
+  padding: 15px 35px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.default-content-wrapper p a[href*="magazine"]:hover {
+  background-color: #e6d300; /* Slightly darker yellow on hover */
+}
+
+/* Removes the default paragraph margin that might shift the button */
+.default-content-wrapper p {
+  margin-top: 40px;
+}
+
+.separator {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.separator::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #ddd;
+  width: 100%;
+}
+
+.default-content-wrapper .button-wrapper {
+  margin-top: 40px !important; /* This creates the 'teaser' space above the button */
+  text-align: left;          /* This centers the button if needed */
+}
+ 
+/* 2. Target the <a> tag with class 'button' inside that wrapper */
+.default-content-wrapper .button-wrapper a.button {
+  display: inline-block !important;
+  background-color: #ffd800 !important; /* Your Yellow */
+  background: #ffd800 !important;
+  color: #000000 !important;
+  padding: 15px 35px !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  border-radius: 4px !important;
+  border: none !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+ 
+/* 3. Hover state for the All Articles button */
+.default-content-wrapper .button-wrapper a.button:hover {
+  background-color: #000000 !important;
+  color: #ffd800 !important;
+}
+ 
+/* 4. Target the text span inside the button (for CMP structure) */
+.default-content-wrapper .button-wrapper a.button .cmp-button__text {
+  color: #000000 !important;
+}
+ 
+.default-content-wrapper .button-wrapper a.button:hover .cmp-button__text {
+  color: #ffd800 !important;
+}
+ 
+.separator {
+  border-top: 1px solid #dcdcdc;
+  margin: 40px 0;
+  width: 100%;
+}
+ 
+/* Container for the breadcrumb */
+.default-content-wrapper p:has(strong) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* Remove global yellow background if it's currently on the link */
+.default-content-wrapper p strong a {
+    background-color: transparent !important;
+    color: #000 !important;
+    text-decoration: none;
+    padding: 0;
+}
+
+/* The Magazine Box (Optional: remove background-color if you want it plain) */
+.default-content-wrapper p strong:first-of-type {
+    background-color: #ffdc00;
+    padding: 5px 15px;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* THE YELLOW ARROW */
+/* We target the specific text color for the arrow symbol */
+.default-content-wrapper p strong::after {
+    content: '>';
+    color: #ffdc00; /* WKND Yellow */
+    font-weight: 900;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+/* Hide the actual typed '>' in the Doc to replace it with the CSS one for better control */
+/* If you typed the arrow in the Doc, we can just color it: */
+
+
+main .section.article-shell {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  background: #fff; /* remove grey */
+}
+
+/* left article column width */
+.article-shell .breadcrumb,
+.article-shell .articlepage,
+.article-shell .quote,
+.article-shell .text,
+.article-shell .sectiontitle,
+.article-shell .imagecopy {
+  max-width: 760px;
+}
+
+/* right sidebar */
+.article-shell .articlepagesidebar {
+  position: absolute;
+  top: 70px;          /* starts below breadcrumb/title area */
+  right: 24px;
+  width: 320px;
+}
+
+.section.breadcrum-container {
+  padding-top: 32px;
+}
+
+main .section.trip-layout {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  column-gap: 150px;
+  align-items: start;
+}
+
+main .section.trip-layout .tripdetails-wrapper {
+  grid-column: 1;
+  align-self: start;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+main .section.trip-layout .tabscontent-wrapper {
+  grid-column: 2;
+  align-self: start;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 1024px) {
+  main .section.trip-layout {
+    grid-template-columns: 170px minmax(0, 1fr);
+    column-gap: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  main .section.trip-layout {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+  }
+
+  main .section.trip-layout .tripdetails-wrapper,
+  main .section.trip-layout .tabscontent-wrapper {
+    grid-column: auto;
+  }
+}

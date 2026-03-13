@@ -25,3 +25,241 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+.button.primary {
+  background: none !important;   /* remove background */
+  border: none !important;       /* remove border */
+  color: #000 !important;        /* text color */
+  padding: 0 !important;         /* remove extra padding */
+  font-weight: 600;              /* keep text slightly bold if desired */
+  text-decoration: underline;    /* optional, makes it look like a link */
+  cursor: pointer;               /* pointer on hover */
+}
+ 
+/* Optional hover effect */
+.button.primary:hover {
+  color: #555 !important;        /* subtle color change on hover */
+  text-decoration: underline;    /* keep underline on hover */
+}
+
+/* --- Magazine Grid Fix: 4 Columns makes cards smaller --- */
+.cards.magazine > ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Changed to 4 columns to reduce size */
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ 
+/* Yellow Badge with Lock icon */
+.cards.magazine .magazine-badge {
+  width: 50px;
+  height: 40px;
+  background-color: #FFEA00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+}
+ 
+.cards.magazine .magazine-badge span {
+  font-size: 18px;
+}
+ 
+/* Text Styling */
+.cards.magazine .cards-card-body h3 {
+  color: #707070 !important;
+  font-size: 16px; /* Smaller font for smaller cards */
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+ 
+.cards.magazine .cards-card-body p {
+  color: #B0B0B0 !important;
+  font-size: 12px;
+  margin-bottom: 10px;
+  display: block;
+}
+ 
+/* Styled "Read More" link */
+.cards.magazine .cards-card-body p:last-child {
+  display: inline-block;
+  background: #EFEFEF;
+  padding: 8px 12px;
+  color: #8E8E8E;
+  font-weight: bold;
+  font-size: 11px;
+}
+ 
+/* Image styling - Dimmed until hover */
+.cards.magazine .cards-card-image {
+  margin-top: 15px;
+}
+ 
+.cards.magazine .cards-card-image img {
+  width: 100%;
+  opacity: 0.5;
+  filter: grayscale(100%);
+  transition: 0.3s ease;
+}
+ 
+ 
+/* Responsive: adjust columns for smaller screens */
+@media (max-width: 1000px) {
+  .cards.magazine > ul { grid-template-columns: repeat(2, 1fr); }
+}
+ 
+@media (max-width: 600px) {
+  .cards.magazine > ul { grid-template-columns: 1fr; }
+}
+ 
+.cards.team img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+ 
+.cards.team li {
+  text-align: center;
+}
+ 
+/* Center headings */
+.cards.team li h3,
+.cards.team li h5 {
+  text-align: center;
+  margin: 6px 0;
+}
+ 
+/* SOCIAL BAR */
+.cards.team li p:last-child{
+  background:#222;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:15px;
+  padding:10px 10px;   /* increase height */
+  margin:12px auto;
+  width:100px;         /* box length */
+  border-radius:5px;
+}
+ 
+.cards.team li p:last-child .icon{
+  width:16px;
+  height:15px;
+  fill:white;
+}
+ 
+/* FORCE ICON LINKS INLINE */
+.cards.team li p:last-child a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+ 
+/* FIX HUGE ICON ISSUE */
+.cards.team li p:last-child img,
+.cards.team li p:last-child svg{
+  width:24px !important;
+  height:24px !important;
+  max-width:24px;
+}
+ 
+/* MAKE ICONS WHITE */
+.cards.team li p:last-child img{
+  filter:invert(1);
+}
+ 
+.cards.team li p:last-child .icon{
+  width:16px;
+  height:16px;
+  fill:white;
+}
+
+/* =========================
+   LAPTOP
+   ========================= */
+@media (max-width: 1200px) {
+
+  .cards > ul {
+    gap: 20px;
+  }
+
+  .cards.magazine > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cards.team img {
+    width: 140px;
+    height: 140px;
+  }
+
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+@media (max-width: 1024px) {
+
+  .cards > ul {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 18px;
+  }
+
+  .cards.magazine > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards .cards-card-body {
+    margin: 14px;
+  }
+
+  .cards.team img {
+    width: 120px;
+    height: 120px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+
+  .cards > ul {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .cards.magazine > ul {
+    grid-template-columns: 1fr;
+  }
+
+  .cards .cards-card-body {
+    margin: 12px;
+  }
+
+  .cards.team img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cards.team li p:last-child {
+    width: 90px;
+    padding: 8px;
+    gap: 12px;
+  }
+
+  .cards.team li p:last-child img,
+  .cards.team li p:last-child svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+}

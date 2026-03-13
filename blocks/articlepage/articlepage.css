@@ -1,0 +1,148 @@
+.articlepage {
+  max-width: 760px;
+  margin: 0;
+}
+
+.articlepage-main {
+  max-width: 760px;
+}
+
+.articlepage-main h1 {
+  max-width: 760px;
+  margin: 0 0 26px;
+  font-size: 46px;
+  line-height: 1.15;
+  font-weight: 400;
+  color: #111;
+}
+
+.articlepage-author {
+  max-width: 760px;
+  margin: 0 0 26px;
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #111;
+}
+
+.articlepage-main p {
+  max-width: 760px;
+  margin: 0 0 22px;
+  font-size: 18px;
+  line-height: 2;
+  color: #222;
+  text-align: justify;
+}
+
+/* remove extra spacing from da.live wrappers */
+.articlepage > div,
+.articlepage > div > div {
+  margin: 0;
+  padding: 0;
+}
+
+/* if paragraph still looks wider inside article shell */
+.article-shell .articlepage,
+.article-shell .articlepage-main,
+.article-shell .articlepage-main p,
+.article-shell .articlepage-main h1,
+.article-shell .articlepage-author {
+  max-width: 760px;
+}
+
+/* =========================
+   LAPTOP / SMALL DESKTOP
+   ========================= */
+@media (max-width: 1200px) {
+  .articlepage,
+  .articlepage-main,
+  .article-shell .articlepage,
+  .article-shell .articlepage-main,
+  .article-shell .articlepage-main p,
+  .article-shell .articlepage-main h1,
+  .article-shell .articlepage-author {
+    max-width: 700px;
+  }
+
+  .articlepage-main h1 {
+    font-size: 42px;
+    line-height: 1.15;
+    margin-bottom: 24px;
+  }
+
+  .articlepage-author {
+    margin-bottom: 24px;
+  }
+
+  .articlepage-main p {
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+  }
+}
+
+/* =========================
+   TABLET
+   ========================= */
+@media (max-width: 1024px) {
+  .articlepage,
+  .articlepage-main,
+  .article-shell .articlepage,
+  .article-shell .articlepage-main,
+  .article-shell .articlepage-main p,
+  .article-shell .articlepage-main h1,
+  .article-shell .articlepage-author {
+    max-width: 100%;
+  }
+
+  .articlepage {
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+
+  .articlepage-main h1 {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 22px;
+  }
+
+  .articlepage-author {
+    font-size: 11px;
+    margin-bottom: 20px;
+  }
+
+  .articlepage-main p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+  }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+  .articlepage {
+    padding: 0 16px;
+  }
+
+  .articlepage-main h1 {
+    font-size: 28px;
+    line-height: 1.25;
+    margin-bottom: 18px;
+  }
+
+  .articlepage-author {
+    font-size: 10px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+  }
+
+  .articlepage-main p {
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+}

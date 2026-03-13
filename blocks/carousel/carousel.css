@@ -1,0 +1,224 @@
+.carousel {
+  position: relative;
+  width: 100%;        /* full width */
+  max-width: 1400px;  /* increase max width */
+  margin: 0 auto;     /* center the carousel */
+}
+/* Slides */
+.carousel-slides {
+  position: relative;
+}
+ 
+.carousel-slide {
+  position: relative;
+}
+ 
+/* Image */
+.carousel-slide img {
+  width: 100%;        /* image fills container */
+  height: 560px;
+  object-fit: cover;
+  display: block;
+}
+/* Text overlay box */
+.carousel-content {
+  position: absolute;
+  bottom: 0;
+  left: 3%;
+  right: 0;              /* makes textbox stretch till image end */
+  background: #fff;
+  padding: 20px 30px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+ 
+/* Title */
+.carousel-content h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+ 
+/* Description */
+.carousel-content p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+ 
+/* Button */
+.carousel-content a {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 22px;
+  background-color: #ffd800; /* Use background-color for clarity */
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+ 
+.carousel-content a:hover {
+  background: #ffcc00;
+}
+ 
+/* Navigation arrows */
+.carousel-navigation button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  background: rgba(255,255,255,0.7);
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  z-index: 3;
+}
+ 
+.carousel-navigation button:first-child {
+  left: 20px;
+}
+ 
+.carousel-navigation button:last-child {
+  right: 20px;
+}
+ 
+/* Dots */
+.carousel-pagination {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+ 
+.carousel-pagination button {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: none;
+  margin: 5px;
+  background: #ccc;
+}
+ 
+.carousel-pagination button.active {
+  background: #000;
+}
+ 
+.carousel-content a.button.primary,
+.carousel-content .button-primary {
+  display: inline-block !important;
+  margin-top: 25px !important;    /* This creates the teaser gap */
+  padding: 15px 35px !important;
+  background-color: #ffd800 !important;
+  background: #ffd800 !important;
+  color: #000000 !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  border-radius: 4px !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+ 
+/* Force hover state for carousel */
+.carousel-content a.button.primary:hover,
+.carousel-content .button-primary:hover {
+  background-color: #000 !important;
+  color: #ffd800 !important;
+}
+
+/* =========================
+   LAPTOP
+   ========================= */
+@media (max-width: 1200px) {
+
+  .carousel {
+    max-width: 1200px;
+  }
+
+  .carousel-slide img {
+    height: 500px;
+  }
+
+  .carousel-content {
+    left: 4%;
+    padding: 18px 26px;
+  }
+
+  .carousel-content h2 {
+    font-size: 26px;
+  }
+
+  .carousel-content p {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+@media (max-width: 1024px) {
+
+  .carousel-slide img {
+    height: 440px;
+  }
+
+  .carousel-content {
+    left: 5%;
+    padding: 16px 22px;
+  }
+
+  .carousel-content h2 {
+    font-size: 24px;
+  }
+
+  .carousel-content p {
+    font-size: 13px;
+  }
+
+  .carousel-content a.button.primary,
+  .carousel-content .button-primary {
+    padding: 12px 28px !important;
+    margin-top: 18px !important;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+
+  .carousel-slide img {
+    height: 320px;
+  }
+
+  .carousel-content {
+    position: relative;
+    left: 0;
+    right: 0;
+    padding: 18px;
+    box-shadow: none;
+  }
+
+  .carousel-content h2 {
+    font-size: 20px;
+  }
+
+  .carousel-content p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .carousel-navigation button {
+    font-size: 22px;
+    padding: 8px 12px;
+  }
+
+  .carousel-content a.button.primary,
+  .carousel-content .button-primary {
+    padding: 10px 22px !important;
+    margin-top: 16px !important;
+  }
+
+}
