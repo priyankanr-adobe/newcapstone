@@ -20,15 +20,17 @@ export default function decorate(block) {
       ? paragraphs.map((p) => p.innerHTML.trim()).filter(Boolean)
       : row.innerHTML.split(/<br\s*\/?>/i).map((part) => part.trim()).filter(Boolean);
 
+    const [cardTitleText, cardDateText] = textParts;
+
     const cardTitle = document.createElement('div');
     cardTitle.className = 'articlepagesidebar-card-title';
-    cardTitle.innerHTML = textParts[0] || '';
+    cardTitle.innerHTML = cardTitleText || '';
     card.appendChild(cardTitle);
 
-    if (textParts[1]) {
+    if (cardDateText) {
       const cardDate = document.createElement('div');
       cardDate.className = 'articlepagesidebar-card-date';
-      cardDate.innerHTML = textParts[1];
+      cardDate.innerHTML = cardDateText;
       card.appendChild(cardDate);
     }
 
