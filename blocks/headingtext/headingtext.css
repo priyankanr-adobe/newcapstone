@@ -27,8 +27,7 @@
 /* =========================
    LAPTOP
    ========================= */
-@media (max-width: 1200px) {
-
+@media (width <= 1200px) {
   .headingtext {
     max-width: 700px;
     margin: 50px 0 26px;
@@ -49,8 +48,7 @@
 /* =========================
    TABLET
    ========================= */
-@media (max-width: 1024px) {
-
+@media (width <= 1024px) {
   .headingtext {
     max-width: 100%;
     margin: 46px 24px 24px;
@@ -71,8 +69,7 @@
 /* =========================
    MOBILE
    ========================= */
-@media (max-width: 768px) {
-
+@media (width <= 768px) {
   .headingtext {
     margin: 40px 16px 20px;
   }

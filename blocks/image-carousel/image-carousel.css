@@ -1,5 +1,14 @@
+.image-carousel-slide img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+}
+
 .image-carousel-slider {
   position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
 }
 
 .image-carousel-slide {
@@ -8,12 +17,6 @@
 
 .image-carousel-slide.active {
   display: block;
-}
-
-.image-carousel-slide img {
-  width: 100%;
-  height: 650px;
-  object-fit: cover;
 }
 
 /* bottom bar */
@@ -37,12 +40,12 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background:#bbb;
-  border:none;
+  background: #bbb;
+  border: none;
 }
 
 .image-carousel-dot.active {
-  background:#000;
+  background: #000;
 }
 
 /* arrows */
@@ -55,10 +58,10 @@
 }
 
 .image-carousel-arrows button {
-  border:none;
-  background:transparent;
-  font-size:40px;
-  cursor:pointer;
+  border: none;
+  background: transparent;
+  font-size: 40px;
+  cursor: pointer;
 }
 
 /* make the block span full width like the original */
@@ -87,59 +90,20 @@ main .section .image-carousel {
   max-width: 100%;
 }
 
-/* slider full width */
-.image-carousel-slider {
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-}
-
 /* slide image should fill full width */
+.image-carousel-slide img,
 .image-carousel-slide picture,
-.image-carousel-slide picture img,
-.image-carousel-slide img {
+.image-carousel-slide picture img {
   display: block;
   width: 100%;
   height: 450px;
   object-fit: cover;
 }
 
-/* Tablet */
-@media (max-width: 1024px) {
-  .image-carousel-slide img {
-    height: 500px;
-  }
-
-  .image-carousel-arrows button {
-    font-size: 32px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .image-carousel-slide img {
-    height: 260px;
-  }
-
-  .image-carousel-arrows {
-    right: 16px;
-  }
-
-  .image-carousel-arrows button {
-    font-size: 26px;
-  }
-
-  .image-carousel-dot {
-    width: 10px;
-    height: 10px;
-  }
-}
-
 /* =========================
    LAPTOP
    ========================= */
-@media (max-width: 1200px) {
-
+@media (width <= 1200px) {
   .image-carousel-slide img,
   .image-carousel-slide picture img {
     height: 560px;
@@ -156,15 +120,12 @@ main .section .image-carousel {
   .image-carousel-controls {
     height: 70px;
   }
-
 }
-
 
 /* =========================
    TABLET
    ========================= */
-@media (max-width: 1024px) {
-
+@media (width <= 1024px) {
   .image-carousel-slide img,
   .image-carousel-slide picture img {
     height: 500px;
@@ -186,15 +147,12 @@ main .section .image-carousel {
     width: 11px;
     height: 11px;
   }
-
 }
-
 
 /* =========================
    MOBILE
    ========================= */
-@media (max-width: 768px) {
-
+@media (width <= 768px) {
   .image-carousel-slide img,
   .image-carousel-slide picture img {
     height: 260px;
@@ -217,5 +175,4 @@ main .section .image-carousel {
     width: 10px;
     height: 10px;
   }
-
 }

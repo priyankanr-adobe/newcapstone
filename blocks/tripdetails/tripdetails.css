@@ -54,7 +54,7 @@
 }
 
 /* TABLET */
-@media (max-width: 1024px) {
+@media (width <= 1024px) {
   .tripdetails {
     max-width: 170px;
     padding-left: 14px;
@@ -74,7 +74,7 @@
 }
 
 /* MOBILE */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .tripdetails {
     max-width: 100%;
     padding-left: 10px;
@@ -104,8 +104,7 @@
 }
 
 /* LAPTOP */
-@media (max-width: 1200px) {
-
+@media (width <= 1200px) {
   .tripdetails {
     max-width: 180px;
     padding-left: 16px;

@@ -46,8 +46,7 @@
 /* =========================
    LAPTOP
    ========================= */
-@media (max-width: 1200px) {
-
+@media (width <= 1200px) {
   .tabs {
     margin: 22px 0 32px;
   }
@@ -67,8 +66,7 @@
 /* =========================
    TABLET
    ========================= */
-@media (max-width: 1024px) {
-
+@media (width <= 1024px) {
   .tabs ul {
     gap: 20px;
     flex-wrap: wrap;
@@ -85,8 +83,7 @@
 /* =========================
    MOBILE
    ========================= */
-@media (max-width: 768px) {
-
+@media (width <= 768px) {
   .tabs {
     margin: 20px 0 28px;
   }

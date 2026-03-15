@@ -358,14 +358,35 @@ footer .footer ul {
   margin: 0;
   padding: 0;
 }
- 
+
+.default-content-wrapper p strong a {
+  background-color: transparent !important;
+  color: #000 !important;
+  text-decoration: none;
+  padding: 0;
+}
+
 /* link style */
 footer .footer ul li a {
   color: white;
   text-decoration: none;
   font-weight: 600;
 }
- 
+
+/* Removes the default paragraph margin that might shift the button */
+.default-content-wrapper p {
+  margin-top: 40px;
+}
+
+.default-content-wrapper p:has(strong) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
 /* copyright spacing */
 footer .footer p:first-of-type {
   margin-top: 8px;
@@ -381,8 +402,8 @@ footer .footer .default-content-wrapper p {
 /* Targets the "ALL ARTICLES" link specifically */
 .default-content-wrapper p a[href*="magazine"] {
   display: inline-block;
-  background-color: #ffeb00; /* The yellow color */
-  color: #000;              /* Black text */
+  background-color: #ffeb00;
+  color: #000;
   padding: 15px 35px;
   text-decoration: none;
   font-weight: bold;
@@ -395,17 +416,14 @@ footer .footer .default-content-wrapper p {
 
 /* Hover effect */
 .default-content-wrapper p a[href*="magazine"]:hover {
-  background-color: #e6d300; /* Slightly darker yellow on hover */
+  background-color: #e6d300;
 }
 
-/* Removes the default paragraph margin that might shift the button */
-.default-content-wrapper p {
-  margin-top: 40px;
-}
-
+/* separator */
 .separator {
   width: 100%;
   margin: 40px 0;
+  border-top: 1px solid #dcdcdc;
 }
 
 .separator::after {
@@ -416,17 +434,17 @@ footer .footer .default-content-wrapper p {
   width: 100%;
 }
 
+/* Button wrapper */
 .default-content-wrapper .button-wrapper {
-  margin-top: 40px !important; /* This creates the 'teaser' space above the button */
-  text-align: left;          /* This centers the button if needed */
+  margin-top: 40px !important;
+  text-align: left;
 }
- 
-/* 2. Target the <a> tag with class 'button' inside that wrapper */
+
+/* Button styling */
 .default-content-wrapper .button-wrapper a.button {
   display: inline-block !important;
-  background-color: #ffd800 !important; /* Your Yellow */
-  background: #ffd800 !important;
-  color: #000000 !important;
+  background-color: #ffd800 !important;
+  color: #000 !important;
   padding: 15px 35px !important;
   font-weight: bold !important;
   text-decoration: none !important;
@@ -436,74 +454,55 @@ footer .footer .default-content-wrapper p {
   visibility: visible !important;
   opacity: 1 !important;
 }
- 
-/* 3. Hover state for the All Articles button */
+
+/* Hover */
 .default-content-wrapper .button-wrapper a.button:hover {
-  background-color: #000000 !important;
+  background-color: #000 !important;
   color: #ffd800 !important;
 }
- 
-/* 4. Target the text span inside the button (for CMP structure) */
+
+/* Disable lint rule for cmp button */
+ /* stylelint-disable selector-class-pattern */
+
 .default-content-wrapper .button-wrapper a.button .cmp-button__text {
-  color: #000000 !important;
+  color: #000 !important;
 }
- 
+
 .default-content-wrapper .button-wrapper a.button:hover .cmp-button__text {
   color: #ffd800 !important;
 }
- 
-.separator {
-  border-top: 1px solid #dcdcdc;
-  margin: 40px 0;
-  width: 100%;
-}
- 
-/* Container for the breadcrumb */
-.default-content-wrapper p:has(strong) {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 1px;
-}
 
-/* Remove global yellow background if it's currently on the link */
-.default-content-wrapper p strong a {
-    background-color: transparent !important;
-    color: #000 !important;
-    text-decoration: none;
-    padding: 0;
-}
+ /* stylelint-enable selector-class-pattern */
 
-/* The Magazine Box (Optional: remove background-color if you want it plain) */
+/* -----------------------------
+   Breadcrumb styles
+-------------------------------- */
+
 .default-content-wrapper p strong:first-of-type {
-    background-color: #ffdc00;
-    padding: 5px 15px;
-    display: inline-flex;
-    align-items: center;
+  background-color: #ffdc00;
+  padding: 5px 15px;
+  display: inline-flex;
+  align-items: center;
 }
 
-/* THE YELLOW ARROW */
-/* We target the specific text color for the arrow symbol */
 .default-content-wrapper p strong::after {
-    content: '>';
-    color: #ffdc00; /* WKND Yellow */
-    font-weight: 900;
-    margin-left: 10px;
-    display: inline-block;
+  content: ">";
+  color: #ffdc00;
+  font-weight: 900;
+  margin-left: 10px;
+  display: inline-block;
 }
 
-/* Hide the actual typed '>' in the Doc to replace it with the CSS one for better control */
-/* If you typed the arrow in the Doc, we can just color it: */
-
+/* -----------------------------
+   Article layout
+-------------------------------- */
 
 main .section.article-shell {
   position: relative;
   max-width: 1280px;
   margin: 0 auto;
   padding: 40px 24px;
-  background: #fff; /* remove grey */
+  background-color: #fff;
 }
 
 /* left article column width */
@@ -519,7 +518,7 @@ main .section.article-shell {
 /* right sidebar */
 .article-shell .articlepagesidebar {
   position: absolute;
-  top: 70px;          /* starts below breadcrumb/title area */
+  top: 70px;
   right: 24px;
   width: 320px;
 }
@@ -527,6 +526,10 @@ main .section.article-shell {
 .section.breadcrum-container {
   padding-top: 32px;
 }
+
+/* -----------------------------
+   Trip layout
+-------------------------------- */
 
 main .section.trip-layout {
   display: grid;
@@ -551,14 +554,22 @@ main .section.trip-layout .tabscontent-wrapper {
   padding: 0;
 }
 
-@media (max-width: 1024px) {
+/* =========================
+   TABLET
+   ========================= */
+
+@media (width <= 1024px) {
   main .section.trip-layout {
     grid-template-columns: 170px minmax(0, 1fr);
     column-gap: 36px;
   }
 }
 
-@media (max-width: 767px) {
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (width <= 767px) {
   main .section.trip-layout {
     grid-template-columns: 1fr;
     row-gap: 32px;

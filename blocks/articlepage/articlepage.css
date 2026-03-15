@@ -54,9 +54,31 @@
 /* =========================
    LAPTOP / SMALL DESKTOP
    ========================= */
-@media (max-width: 1200px) {
+@media (width <= 1200px) {
   .articlepage,
-  .articlepage-main,
+  .articlepage-main {
+    max-width: 700px;
+  }
+
+  .articlepage-main h1 {
+    max-width: 700px;
+    font-size: 42px;
+    line-height: 1.15;
+    margin-bottom: 24px;
+  }
+
+  .articlepage-author {
+    max-width: 700px;
+    margin-bottom: 24px;
+  }
+
+  .articlepage-main p {
+    max-width: 700px;
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+  }
+
   .article-shell .articlepage,
   .article-shell .articlepage-main,
   .article-shell .articlepage-main p,
@@ -64,35 +86,17 @@
   .article-shell .articlepage-author {
     max-width: 700px;
   }
-
-  .articlepage-main h1 {
-    font-size: 42px;
-    line-height: 1.15;
-    margin-bottom: 24px;
-  }
-
-  .articlepage-author {
-    margin-bottom: 24px;
-  }
-
-  .articlepage-main p {
-    font-size: 17px;
-    line-height: 1.9;
-    margin-bottom: 20px;
-  }
 }
 
 /* =========================
    TABLET
    ========================= */
-@media (max-width: 1024px) {
+@media (width <= 1024px) {
   .articlepage,
   .articlepage-main,
-  .article-shell .articlepage,
-  .article-shell .articlepage-main,
-  .article-shell .articlepage-main p,
-  .article-shell .articlepage-main h1,
-  .article-shell .articlepage-author {
+  .articlepage-main h1,
+  .articlepage-author,
+  .articlepage-main p {
     max-width: 100%;
   }
 
@@ -117,12 +121,20 @@
     line-height: 1.8;
     margin-bottom: 18px;
   }
+
+  .article-shell .articlepage,
+  .article-shell .articlepage-main,
+  .article-shell .articlepage-main p,
+  .article-shell .articlepage-main h1,
+  .article-shell .articlepage-author {
+    max-width: 100%;
+  }
 }
 
 /* =========================
    MOBILE
    ========================= */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .articlepage {
     padding: 0 16px;
   }

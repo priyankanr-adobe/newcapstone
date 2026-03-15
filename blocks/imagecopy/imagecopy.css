@@ -46,8 +46,7 @@
 /* =========================
    LAPTOP
    ========================= */
-@media (max-width: 1200px) {
-
+@media (width <= 1200px) {
   .imagecopy {
     max-width: 700px;
   }
@@ -70,8 +69,7 @@
 /* =========================
    TABLET
    ========================= */
-@media (max-width: 1024px) {
-
+@media (width <= 1024px) {
   .imagecopy {
     max-width: 100%;
     padding: 0 24px;
@@ -98,8 +96,7 @@
 /* =========================
    MOBILE
    ========================= */
-@media (max-width: 768px) {
-
+@media (width <= 768px) {
   .imagecopy {
     padding: 0 16px;
     margin-bottom: 28px;
