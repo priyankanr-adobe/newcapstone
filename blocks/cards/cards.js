@@ -37,12 +37,12 @@ export default function decorate(block) {
             title.replaceWith(h3);
             h3.append(title);
           } else if (title.tagName !== 'H3') {
-      const h3 = document.createElement('h3');
-      h3.innerHTML = title.innerHTML;
-      title.replaceWith(h3);
-    }
-  }
-}
+            const h3 = document.createElement('h3');
+            h3.innerHTML = title.innerHTML;
+            title.replaceWith(h3);
+          }
+        }
+      }
     });
 
     // Magazine variant
@@ -59,16 +59,16 @@ export default function decorate(block) {
         if (image) li.appendChild(image);
       }
     }
-// make image clickable using same link as title
-const link = li.querySelector('.cards-card-body a');
-const image = li.querySelector('.cards-card-image');
+    // make image clickable using same link as title
+    const link = li.querySelector('.cards-card-body a');
+    const image = li.querySelector('.cards-card-image');
 
-if (link && image) {
-  image.style.cursor = 'pointer';
-  image.addEventListener('click', () => {
-    window.location.href = link.href;
-  });
-}
+    if (link && image) {
+      image.style.cursor = 'pointer';
+      image.addEventListener('click', () => {
+      window.location.href = link.href;
+    });
+  }
 
     ul.append(li);
   });
