@@ -66,9 +66,9 @@ export default function decorate(block) {
     if (link && image) {
       image.style.cursor = 'pointer';
       image.addEventListener('click', () => {
-      window.location.href = link.href;
-    });
-  }
+        window.location.href = link.href;
+      });
+    }
 
     ul.append(li);
   });

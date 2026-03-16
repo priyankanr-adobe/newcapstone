@@ -43,6 +43,16 @@
   text-align: center;
 }
 
+/* Fix card title wrapping */
+.cards .cards-card-body h3 {
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 700;
+  margin-bottom: 10px;
+  overflow-wrap: break-word;
+}
+
+
 .cards.team li h3,
 .cards.team li h5 {
   text-align: center;
@@ -54,6 +64,13 @@
   font-size: 12px;
   margin-bottom: 10px;
   display: block;
+}
+
+/* if title contains link */
+.cards .cards-card-body h3 a {
+  color: inherit;
+  text-decoration: none;
+  display: inline;
 }
 
 .cards.team li p:last-child {
@@ -131,23 +148,6 @@
   font-size: 14px;
   margin-bottom: 5px;
   text-transform: uppercase;
-}
-
-/* Fix card title wrapping */
-.cards .cards-card-body h3 {
-  font-size: 24px;
-  line-height: 1.25;
-  font-weight: 700;
-  margin-bottom: 10px;
-  word-break: break-word;
-  overflow-wrap: break-word;
-}
-
-/* if title contains link */
-.cards .cards-card-body h3 a {
-  color: inherit;
-  text-decoration: none;
-  display: inline;
 }
 
 .cards.magazine .cards-card-body p:last-child {
