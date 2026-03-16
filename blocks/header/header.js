@@ -182,10 +182,12 @@ export default async function decorate(block) {
   ====================== */
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 0) {
-      nav.classList.add('scrolled');
+    const header = document.querySelector('header');
+    if (!header) return;
+    if (window.scrollY > 80) {
+      header.classList.add('scrolled');
     } else {
-      nav.classList.remove('scrolled');
+      header.classList.remove('scrolled');
     }
   });
 }
