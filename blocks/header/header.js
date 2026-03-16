@@ -127,7 +127,7 @@ export default async function decorate(block) {
 
   block.append(navWrapper);
   /* SIGN IN MODAL */
- 
+
   /* =====================
    SIGN IN MODAL
 ===================== */
