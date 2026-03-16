@@ -26,17 +26,17 @@ export default function decorate(block) {
       }
 
       if (div.children.length === 1 && div.querySelector('picture')) {
-  div.className = 'cards-card-image';
-} else {
-  div.className = 'cards-card-body';
-  const title = div.querySelector('h1, h2, h3, h4, h5, h6, a');
+        div.className = 'cards-card-image';
+      } else {
+        div.className = 'cards-card-body';
+        const title = div.querySelector('h1, h2, h3, h4, h5, h6, a');
 
-  if (title) {
-    if (title.tagName === 'A') {
-      const h3 = document.createElement('h3');
-      title.replaceWith(h3);
-      h3.append(title);
-    } else if (title.tagName !== 'H3') {
+        if (title) {
+          if (title.tagName === 'A') {
+            const h3 = document.createElement('h3');
+            title.replaceWith(h3);
+            h3.append(title);
+          } else if (title.tagName !== 'H3') {
       const h3 = document.createElement('h3');
       h3.innerHTML = title.innerHTML;
       title.replaceWith(h3);
