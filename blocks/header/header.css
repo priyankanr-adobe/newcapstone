@@ -5,7 +5,7 @@
 /* --- Reserve space for fixed header --- */
  
 header {
-    height: 150px;
+    height: 118px;
 }
  
 /* --- Fixed wrapper --- */
@@ -60,13 +60,13 @@ header nav .nav-brand {
 }
  
 header nav .nav-brand .default-content-wrapper {
-    max-width: 1264px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 8px 32px;
+    padding: 4px 32px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 24px;
+    gap: 20px;
 }
  
 header nav .nav-brand .default-content-wrapper p {
@@ -77,7 +77,7 @@ header nav .nav-brand .default-content-wrapper p {
  
 header nav .nav-brand a {
     color: #fff;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -91,7 +91,7 @@ header nav .nav-sections {
     flex: 0 0 auto;
     display: flex;
     align-items: center;
-    height: 114px;
+    height: 86px;
     padding: 0 0 0 48px;
     transition:
         height 0.3s ease,
@@ -140,7 +140,7 @@ header nav .nav-tools {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    height: 114px;
+    height: 86px;
     transition: height 0.3s ease;
 }
  
