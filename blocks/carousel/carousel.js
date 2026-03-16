@@ -8,9 +8,12 @@ export default function decorate(block) {
     slide.classList.add('carousel-slide');
     const img = slide.querySelector('picture');
     const text = slide.querySelectorAll('p, h1, h2, h3, a');
+
     const content = document.createElement('div');
     content.className = 'carousel-content';
+
     text.forEach((el) => content.appendChild(el));
+
     slide.append(img, content);
     wrapper.appendChild(slide);
   });
@@ -21,10 +24,15 @@ export default function decorate(block) {
   /* Navigation arrows */
   const nav = document.createElement('div');
   nav.className = 'carousel-navigation';
+
   const prev = document.createElement('button');
   prev.innerHTML = '&#10094;';
+  prev.setAttribute('aria-label', 'Previous slide');
+
   const next = document.createElement('button');
   next.innerHTML = '&#10095;';
+  next.setAttribute('aria-label', 'Next slide');
+
   nav.append(prev, next);
   block.append(nav);
 
@@ -36,6 +44,7 @@ export default function decorate(block) {
     slides.forEach((slide, i) => {
       slide.style.display = i === currentSlide ? 'block' : 'none';
     });
+
     [...pagination.children].forEach((dot, i) => {
       dot.classList.toggle('active', i === currentSlide);
     });
@@ -43,11 +52,15 @@ export default function decorate(block) {
 
   slides.forEach((_, i) => {
     const dot = document.createElement('button');
+    dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+
     if (i === 0) dot.classList.add('active');
+
     dot.addEventListener('click', () => {
       currentSlide = i;
       updateCarousel();
     });
+
     pagination.append(dot);
   });
 
