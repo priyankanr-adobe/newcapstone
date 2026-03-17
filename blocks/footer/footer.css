@@ -16,7 +16,7 @@ footer .column > div {
   display: grid;
   grid-template-columns: 140px auto auto;
   align-items: center;
-  column-gap: 40px;
+  column-gap: 180px;
 }
 
 /* LOGO IMAGE (WKND) */
